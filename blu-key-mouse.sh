@@ -4,6 +4,12 @@
 keyboard="C4:14:11:02:D9:9B"
 mouse="0C:E4:41:16:EC:F2"
 
+# check if blueutil is installed and install if not
+if ! [ -x "$(command -v blueutil)" ]; then
+  echo 'Error: blueutil is not installed.' >&2
+  echo 'Installing blueutil...'
+  brew install blueutil
+fi
 #  check if the keyboard is connected and return the status 1 
 function check_bluetooth_keyboard {
     if [[ $(blueutil --is-connected $keyboard) -eq 1 ]]; then
