@@ -3,4 +3,5 @@
 
 ## Usage :
 
+### chmod +x blu-key-mouse.sh
 ### ./blu-key-mouse.sh
